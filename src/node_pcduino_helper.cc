@@ -16,10 +16,10 @@ Handle<Value> setPluse(const Arguments& args) {
         digitalWrite(pin, HIGH);
         delayMicroseconds(pluse);
         digitalWrite(pin, LOW);
-        delayMicroseconds(period - pulse);
+        delayMicroseconds(period - pluse);
     }
 
-    return scope.Close();
+    return scope.Close(Undefined());
 }
 
 void Init(Handle<Object> exports)
